@@ -18,7 +18,7 @@ const SearchBox = () => {
           type="text"
           name="filter"
           value={filter}
-          onChange={handleFilterChange}
+          onChange={evt => handleFilterChange(evt.target.value)}
           placeholder="Search"
         />
       </label>
