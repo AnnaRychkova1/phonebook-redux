@@ -9,11 +9,13 @@ const items = [
 
 const contactsSlice = createSlice({
   name: 'items',
-  initialState: items,
+  initialState: {
+    items,
+  },
   reducers: {
     addContact: {
       reducer(state, action) {
-        state.push(action.payload);
+        state.items.push(action.payload);
       },
       prepare(name, number) {
         return {

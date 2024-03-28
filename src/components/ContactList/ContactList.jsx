@@ -18,7 +18,6 @@ const ContactList = () => {
   const filter = useSelector(selectNameFilter);
 
   const visibleContacts = getVisibleContacts(contacts, filter);
-  console.log(visibleContacts);
   return (
     <ul className={css.contactList}>
       {visibleContacts.map(contact => {
