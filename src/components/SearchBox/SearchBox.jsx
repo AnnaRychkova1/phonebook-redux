@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Field, Formik } from 'formik';
 import { changeFilter, selectNameFilter } from '../../redux/filtersSlice';
 import css from './SearchBox.module.css';
 
@@ -9,10 +8,10 @@ const SearchBox = () => {
 
   const handleFilterChange = filter => dispatch(changeFilter(filter));
   return (
-    <Formik initialValues={''} onSubmit={() => {}}>
+    <form>
       <label className={css.searchLabel}>
         <span>Find contacts by name</span>
-        <Field
+        <input
           className={css.searchField}
           type="text"
           name="filter"
@@ -21,7 +20,7 @@ const SearchBox = () => {
           placeholder="Search"
         />
       </label>
-    </Formik>
+    </form>
   );
 };
 
