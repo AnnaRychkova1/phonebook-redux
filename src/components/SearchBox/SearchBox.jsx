@@ -8,19 +8,17 @@ const SearchBox = () => {
 
   const handleFilterChange = filter => dispatch(changeFilter(filter));
   return (
-    <form>
-      <label className={css.searchLabel}>
-        <span>Find contacts by name</span>
-        <input
-          className={css.searchField}
-          type="text"
-          name="filter"
-          value={filter}
-          onChange={evt => handleFilterChange(evt.target.value)}
-          placeholder="Search"
-        />
-      </label>
-    </form>
+    <div className={css.searchBox}>
+      <span>Find contacts by name</span>
+      <input
+        className={css.searchInput}
+        type="text"
+        name="filter"
+        value={filter}
+        onChange={evt => handleFilterChange(evt.target.value)}
+        placeholder="Search"
+      />
+    </div>
   );
 };
 

@@ -41,3 +41,8 @@ button {
   cursor: pointer;
   display: block;
 }
+
+button:hover,
+button:focus {
+  background-color: rgb(233, 243, 243);
+}
